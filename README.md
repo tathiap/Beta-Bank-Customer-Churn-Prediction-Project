@@ -80,7 +80,7 @@ Customer churn has a significant impact on the financial performance of banks. A
 
 * Age: Older customers showed higher churn risk, possibly reflecting retirement or lifestyle changes.
 
-* Balance: Customers with higher balances tend to churn less — possibly due to deeper product engagement or preferential services.
+* Balance: Customers with higher balances tend to churn less possibly due to deeper product engagement or preferential services.
 
 * Number of Products: A strong negative correlation with churn. Customers with more products (e.g., loans + credit cards) are more likely to stay.
 
