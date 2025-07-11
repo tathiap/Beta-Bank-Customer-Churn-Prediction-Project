@@ -2,7 +2,7 @@
 
 This project explores customer churn at Beta Bank through two different lenses: one designed for transparent, exploratory storytelling (ideal for portfolio walkthroughs), and another built as a modular, production-style machine learning pipeline using .py scripts. Both versions aim to predict which customers are at risk of leaving the bank.
 
--- 
+
 
 ## Project Versions
 
@@ -20,7 +20,7 @@ This project explores customer churn at Beta Bank through two different lenses: 
 * Focus: Reusability, scalability, and production-readiness
 * Entry Point: main.py
 
--- 
+
 ## Objective
 
 To develop a machine learning classifier capable of predicting customer churn using structured historical banking data. The business goal is to support proactive retention strategies by identifying customers at high risk of exiting the bank.
