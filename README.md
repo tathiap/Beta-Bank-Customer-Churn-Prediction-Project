@@ -1,56 +1,65 @@
 # Beta Bank Customer Churn Prediction (Two-Track Project)
 
-This project explores customer churn at Beta Bank through two different lenses: one designed for transparent, exploratory storytelling (ideal for portfolio walkthroughs), and another built as a modular, production-style machine learning pipeline using .py scripts. Both versions aim to predict which customers are at risk of leaving the bank.
+This project analyzes customer churn at Beta Bank using two parallel tracks:
+
+* A visual, exploratory notebook for storytelling and insights.
+* A modular, production ready Python pipeline for real world deployment.
+* An interactive Tableau dashboard for executive level reporting.
 
 
+## Ojective 
+
+To build a machine learning model that predicts customer churn using historical banking data, enabling the bank to proactively identify at risk customers and improve retention strategies.
 
 ## Project Versions
 
-### 1. Exploratory Jupyter Notebook Version
-
-* Audience: For portfolio review, recruiters, and educational purposes
-* Style: Step-by-step walkthrough, visual-rich, with markdown explanations
-* Focus: Emphasis on EDA, learning process, and interpretability
-* File: churn_prediction_exploratory.ipynb
-
-### 2. Modular Python Script Version
-
-* Audience: For technical demonstration of real-world ML deployment structure
-* Style: Clean Python modules (main.py, model.py, evaluate.py, etc.)
-* Focus: Reusability, scalability, and production-readiness
-* Entry Point: main.py
+| Version      | Description                                            |
+| ------------ | ------------------------------------------------------ |
+| `notebooks/` | Visual, step-by-step walkthrough in Jupyter Notebook   |
+| `scripts/`   | Modular Python scripts built for scalability and reuse |
+| `sql/`       | SQL queries for data extraction and churn analysis     |
+| `tableau/`   | Tableau dashboard for visualizing churn trends         |
+| `data/`      | Source datasets used in analysis                       |
 
 
-## Objective
 
-To develop a machine learning classifier capable of predicting customer churn using structured historical banking data. The business goal is to support proactive retention strategies by identifying customers at high risk of exiting the bank.
+## ML Pipeline Overview
 
-## ML Workflow Summary (Both Versions)
+Both versions of the project follow this pipeline:
 
-* Data Cleaning and null handling
-* Exploratory Data Analysis (EDA) of categorical and numerical churn patterns
-* Feature Engineering using one-hot encoding and column transformers
-* Class Imbalance Handling via random upsampling
-* Modeling with Random Forest Classifier
-* Hyperparameter Tuning using GridSearchCV (in .py version)
-* Evaluation via F1 Score, Confusion Matrix, ROC Curve, and Feature Importance
+1. Data Cleaning – Handling nulls and formatting issues
+2. EDA (Exploratory Data Analysis) – Analyzing churn by geography, gender, credit score, etc.
+3. Feature Engineering – Including one hot encoding and numeric transformations
+4. Class Imbalance Handling – Upsampling minority class for balanced modeling
+5. Modeling – Random Forest Classifier (with GridSearchCV tuning in script version)
+6. Evaluation – F1 Score, Confusion Matrix, ROC Curve, Feature Importance
 
-## Key Takeaways
 
-* Customers in certain geographies and those with lower product engagement are more likely to churn.
-* Balancing the training set significantly improved recall and F1 score for minority class predictions.
-* Final model F1 Score: ~0.59 (meets the 0.59 benchmark goal).
+## Tableau Dashboard
 
+The Tableau dashboard highlights:
+
+* Churn Distribution
+* Churn by Gender
+* Churn by Geography (Percentage-based)
+
+🔗 View Dashboard: (https://public.tableau.com/app/profile/tathia.primasany/viz/BetaBankCustomerChurnPredicition/Dashboard1?publish=yes)
+
+## Key Insights
+
+* Customers in Germany exhibit the highest churn rate, followed by France and Spain.
+* Lower product engagement, fewer active accounts, and lower credit scores are associated with churn.
+* After balancing the training set, the Random Forest model achieved an F1 Score of ~0.59, meeting the benchmark.
 
 ## Tools & Technologies
 
-* Python (Jupyter, PyCharm, or VSCode)
-* Libraries: pandas, seaborn, matplotlib, scikit-learn
-* ML Technique: Random Forest (with optional GridSearch tuning)
+* Languages: Python, SQL
+* Libraries: pandas, matplotlib, seaborn, scikit-learn
+* Visualization: Tableau Public
+* Platforms: Jupyter Notebook, VS Code, GitHub
 
 ## Lessons Learned
 
-* F1 Score is a more appropriate metric than accuracy for imbalanced classification tasks.
-* Combining EDA with domain context allows for better feature interpretation.
-* Rewriting notebooks into .py modules improves reusability and production readiness.
-
+* F1 Score is more informative than accuracy for imbalanced data problems.
+* Modular coding enables easier maintenance, reproducibility, and scalability.
+* Data storytelling through Tableau improves communication of analytical results to non technical stakeholders.
