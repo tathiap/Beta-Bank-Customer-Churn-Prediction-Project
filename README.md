@@ -32,13 +32,30 @@ The Tableau dashboard highlights:
 * Churn by Gender
 * Churn by Geography (Percentage-based)
 
-# View Dashboard: (https://public.tableau.com/app/profile/tathia.primasany/viz/BetaBankCustomerChurnPredicition/Dashboard1?publish=yes)
+###  View Dashboard
+(https://public.tableau.com/app/profile/tathia.primasany/viz/BetaBankCustomerChurnPredicition/Dashboard1?publish=yes)
 
 ## Key Insights
 
 * Customers in Germany exhibit the highest churn rate, followed by France and Spain.
 * Lower product engagement, fewer active accounts, and lower credit scores are associated with churn.
 * After balancing the training set, the Random Forest model achieved an F1 Score of ~0.59, meeting the benchmark.
+
+## Insights on Churn Drivers
+
+The analysis highlights several key drivers of churn at Beta Bank:
+
+  * Age → Customers over 50 show the highest churn rates, while younger customers (<30) are more likely to stay.
+  * Balance → Customers with zero account balance are disproportionately at risk, suggesting low engagement.
+  * Tenure → Customers with fewer than 5 years at the bank are more likely to churn, reflecting weaker loyalty.
+  * Geography → Germany consistently shows higher churn compared to France and Spain.
+  * Customer Activity → Inactive members have higher churn than active members.
+  * Products → Customers with only one product churn more frequently than those with diversified product holdings.
+
+### These trends were confirmed by both:
+
+* SQL KPI Analysis (churn rates by age group, geography, tenure, etc.)
+* ML Feature Importance (top predictors included balance, tenure, num_of_products, and age)
 
 ## Tools & Technologies
 
