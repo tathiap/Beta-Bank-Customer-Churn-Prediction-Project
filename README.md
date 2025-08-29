@@ -1,26 +1,15 @@
-# Beta Bank Customer Churn Prediction (Two-Track Project)
+# Beta Bank Customer Churn Prediction 
 
-This project analyzes customer churn at Beta Bank using two parallel tracks:
+This project analyzes customer churn at Beta Bank using SQL and Python in a production-style workflow. It demonstrates:
 
-* A visual, exploratory notebook for storytelling and insights.
-* A modular, production ready Python pipeline for real world deployment.
-* An interactive Tableau dashboard for executive level reporting.
-
+* Data engineering with SQL (setup, load, analytics)
+* Business KPIs for churn analysis
+* Feature store design for ML handoff
+* Python integration to train machine learning models using the SQL-generated dataset
 
 ## Ojective 
 
-To build a machine learning model that predicts customer churn using historical banking data, enabling the bank to proactively identify at risk customers and improve retention strategies.
-
-## Project Versions
-
-| Version      | Description                                            |
-| ------------ | ------------------------------------------------------ |
-| `notebooks/` | Visual, step-by-step walkthrough in Jupyter Notebook   |
-| `scripts/`   | Modular Python scripts built for scalability and reuse |
-| `sql/`       | SQL queries for data extraction and churn analysis     |
-| `tableau/`   | Tableau dashboard for visualizing churn trends         |
-| `data/`      | Source datasets used in analysis                       |
-
+To build a machine learning model that predicts customer churn using historical banking data, enabling the bank to proactively identify at-risk customers and improve retention strategies.
 
 
 ## ML Pipeline Overview
@@ -29,7 +18,7 @@ Both versions of the project follow this pipeline:
 
 1. Data Cleaning – Handling nulls and formatting issues
 2. EDA (Exploratory Data Analysis) – Analyzing churn by geography, gender, credit score, etc.
-3. Feature Engineering – Including one hot encoding and numeric transformations
+3. Feature Engineering – One-hot encoding and numeric transformations
 4. Class Imbalance Handling – Upsampling minority class for balanced modeling
 5. Modeling – Random Forest Classifier (with GridSearchCV tuning in script version)
 6. Evaluation – F1 Score, Confusion Matrix, ROC Curve, Feature Importance
@@ -43,7 +32,7 @@ The Tableau dashboard highlights:
 * Churn by Gender
 * Churn by Geography (Percentage-based)
 
-🔗 View Dashboard: (https://public.tableau.com/app/profile/tathia.primasany/viz/BetaBankCustomerChurnPredicition/Dashboard1?publish=yes)
+# View Dashboard: (https://public.tableau.com/app/profile/tathia.primasany/viz/BetaBankCustomerChurnPredicition/Dashboard1?publish=yes)
 
 ## Key Insights
 
@@ -63,3 +52,4 @@ The Tableau dashboard highlights:
 * F1 Score is more informative than accuracy for imbalanced data problems.
 * Modular coding enables easier maintenance, reproducibility, and scalability.
 * Data storytelling through Tableau improves communication of analytical results to non technical stakeholders.
+* Feature store design bridges data engineering and data science, enabling smoother ML workflows.
